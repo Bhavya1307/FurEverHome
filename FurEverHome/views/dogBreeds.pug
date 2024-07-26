@@ -1,0 +1,34 @@
+extends layout
+
+block pageStyles
+  link(rel="stylesheet", type="text/css", href="dogBreeds.css")
+  link(rel="stylesheet", type="text/css", href="common.css")
+
+block main-content
+  h1 Some Exciting Dog Breeds Information!
+  if dogError
+    p.error= dogError
+  else if dogBreeds && dogBreeds.length > 0
+    .breed-list
+      each breed in dogBreeds
+        .breed-card
+          h3= breed.name
+          if breed.image && breed.image.url
+            img(src=breed.image.url, alt=`${breed.name} Image`)
+          p 
+            strong Temperament: 
+            | #{breed.temperament || 'Not specified'}
+          p 
+            strong Breed Group: 
+            | #{breed.breed_group || 'Not specified'}
+          p 
+            strong Life Span: 
+            | #{breed.life_span || 'Not specified'}
+          p 
+            strong Weight: 
+            | #{breed.weight && breed.weight.metric ? breed.weight.metric + ' kg' : 'Not specified'}
+          p 
+            strong Height: 
+            | #{breed.height && breed.height.metric ? breed.height.metric + ' cm' : 'Not specified'}
+  else
+    p No dog breeds available.

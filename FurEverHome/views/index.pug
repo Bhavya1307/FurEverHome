@@ -1,0 +1,53 @@
+extends layout
+
+block pageStyles
+  link(rel="stylesheet", type="text/css", href="index.css")
+  link(rel="stylesheet", type="text/css", href="common.css")
+
+block main-content
+  div.main
+    img.mainImg(src="https://cdn.openart.ai/uploads/image_H21MfItT_1721873129842_raw.jpg", alt="A cat sitting in between two dogs")
+    div.title
+      h1.page-title Welcome to FurEverHome!
+      p.tag-line Where Love Finds a Home.
+      a.search(href='/search') Adopt Now!
+
+  div.info-section
+    h2.info-title Why Adopt a Pet?
+    div.info-grid
+      div.info-item
+        h3.info-item-title Save a Life
+        p.info-item-text By adopting, you're giving a deserving animal a second chance at a happy life.
+      div.info-item
+        h3.info-item-title Unconditional Love
+        p.info-item-text Adopted pets often show immense gratitude and loyalty to their new families.
+      div.info-item
+        h3.info-item-title Health Benefits
+        p.info-item-text Pet ownership can lower stress, blood pressure, and cholesterol levels.
+      div.info-item
+        h3.info-item-title Ready-Made Friend
+        p.info-item-text Many shelter pets are already house-trained and socialized.
+
+  div.breed-links
+    a.breed-link(href="/dogBreeds")
+      img.breed-img(src="https://cdn.openart.ai/uploads/image_DpkuhTLL_1721873035821_512.webp", alt="Cute dog")
+      p.breed-text Explore Dog Breeds
+    a.breed-link(href="/catBreeds")
+      img.breed-img(src="https://cdn.openart.ai/uploads/image_hKYP9_ej_1721872867470_raw.jpg", alt="Cute cat")
+      p.breed-text Explore Cat Breeds
+
+  div.adoption-process
+    h2.process-title The Adoption Process
+    ol.process-list
+      li.process-item Research and prepare your home
+      li.process-item Visit local shelters or browse online listings
+      li.process-item Meet potential pets and spend time with them
+      li.process-item Complete adoption paperwork and pay any required fees
+      li.process-item Bring your new family member home!
+
+  div.newsletter
+    h2.newsletter-title Stay Updated!
+    p.newsletter-text Subscribe to our newsletter for the latest adoption news and cute animal pictures.
+    form.newsletter-form(action="/subscribe" method="POST")
+      input.newsletter-input(type="email" name="email" placeholder="Enter your email" required)
+      button.newsletter-button(type="submit") Subscribe

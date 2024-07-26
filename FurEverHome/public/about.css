@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+.about-container {
+    font-family: 'Abel', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.about-container h1,
+.about-container h2,
+.about-container h3 {
+    font-family: 'Bowlby One', cursive;
+    color: rgb(183, 115, 60);
+    font-weight: 500;
+    text-align: center;
+}
+
+.about-container section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-container section.what-we-do,
+.about-container section.get-involved {
+    background-color: rgb(255, 245, 238);
+}
+
+.get-involved-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-container .hero {
+    background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9ncyUyMGFuZCUyMGNhdHN8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 10px;
+}
+
+.about-container .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-container .hero p {
+    font-size: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.our-mission {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-container .our-mission img {
+    max-width: 100%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 1px 12px 12px 2px rgb(221, 155, 101);
+}
+
+.about-container .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: rgb(255, 245, 238);
+    padding: 50px;
+    gap: 50px;
+}
+
+.about-container .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-container .service-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-container .service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about-container .service-card h3,
+.about-container .service-card p {
+    padding: 0 15px;
+}
+
+.about-container .cta-button {
+    display: inline-block;
+    background-color: rgb(183, 115, 60);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.cta-button:hover {
+    background-color: rgb(221, 155, 101);
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-container {
+        font-size: 18px;
+    }
+
+    .about-container .hero h1 {
+        font-size: 40px;
+    }
+
+    .about-container .hero p {
+        font-size: 20px;
+    }
+
+    .about-container .services {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        font-size: 16px;
+    }
+
+    .about-container .hero h1 {
+        font-size: 32px;
+    }
+
+    .about-container .hero p {
+        font-size: 18px;
+    }
+
+    .our-mission {
+        flex-direction: column;
+    }
+
+    .about-container .services {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .about-container .service-card img {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-container {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .about-container .hero {
+        padding: 50px 10px;
+    }
+
+    .about-container .hero h1 {
+        font-size: 28px;
+    }
+
+    .about-container .hero p {
+        font-size: 16px;
+    }
+
+    .about-container section {
+        padding: 15px;
+    }
+
+    .about-container .services {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container .service-card img {
+        height: 120px;
+    }
+}

@@ -1,0 +1,76 @@
+extends layout
+
+block pageStyles
+  link(rel="stylesheet", type="text/css", href="care.css")
+  link(rel="stylesheet", type="text/css", href="common.css")
+
+block main-content
+  h1 Pet Care Information
+  
+  section.intro
+    .intro-content
+      p Welcome to our comprehensive pet care guide. Whether you're a new pet owner or have years of experience, proper care is essential for your furry friend's health and happiness.
+
+  section.care-tips
+    h2 Essential Pet Care Tips
+    .tip-grid
+      .tip-card
+        img(src="https://images.unsplash.com/photo-1619895092538-128341789043?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGV0JTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Healthy pet food")
+        h3 Nutrition
+        p Provide a balanced diet appropriate for your pet's age, size, and health condition. Always ensure fresh water is available.
+
+      .tip-card
+        img(src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9nJTIwcGxheWluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Dog playing in the park")
+        h3 Exercise
+        p Regular exercise is crucial for your pet's physical and mental well-being. Aim for at least 30 minutes of activity daily.
+
+      .tip-card
+        img(src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0JTIwZ3Jvb21pbmd8ZW58MHx8MHx8fDA%3D" alt="Cat being groomed")
+        h3 Grooming
+        p Regular grooming keeps your pet clean and allows you to check for any skin issues or abnormalities.
+
+      .tip-card
+        img(src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dmV0ZXJpbmFyaWFufGVufDB8fDB8fHww" alt="Pet at veterinary checkup")
+        h3 Veterinary Care
+        p Schedule regular check-ups and keep vaccinations up to date. Don't hesitate to consult your vet if you notice any changes in your pet's behavior or health.
+
+  section.health-wellness
+    h2 Health and Wellness
+    .section-content
+      p Maintaining your pet's health involves more than just addressing illnesses. It includes:
+      ul
+        li Regular dental care to prevent gum disease
+        li Weight management to avoid obesity-related health issues
+        li Mental stimulation through toys and interaction
+        li Parasite prevention (fleas, ticks, worms)
+
+  section.behavior-training
+    h2 Behavior and Training
+    .section-content
+      p Understanding and shaping your pet's behavior is key to a harmonious relationship. Consider these points:
+      ul
+        li Start training early and be consistent
+        li Use positive reinforcement techniques
+        li Socialize your pet with other animals and people
+        li Address behavioral issues promptly, seeking professional help if needed
+
+  section.emergency-care
+    h2 Emergency Care
+    .section-content
+      p Be prepared for emergencies:
+      ul
+        li Know the location and contact information of your nearest 24-hour veterinary clinic
+        li Keep a pet first-aid kit at home
+        li Learn to recognize signs of common pet emergencies
+
+  section.resources
+    h2 Additional Resources
+    .section-content
+      p For more detailed information on pet care, check out these reputable sources:
+      ul
+        li 
+          a(href="https://www.aspca.org/pet-care" target="_blank") ASPCA Pet Care
+        li 
+          a(href="https://www.avma.org/resources/pet-owners/petcare" target="_blank") American Veterinary Medical Association
+        li 
+          a(href="https://www.akc.org/expert-advice/lifestyle/responsible-dog-owner/" target="_blank") American Kennel Club

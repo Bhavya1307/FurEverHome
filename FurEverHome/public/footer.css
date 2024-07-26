@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+#footer {
+    background-color: rgb(255, 245, 238);
+    color: rgb(183, 115, 60);
+    padding: 30px;
+    font-family: 'Abel', sans-serif;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 2rem;
+    min-width: 250px;
+    padding: 0 1rem;
+}
+
+.footer-title {
+    font-family: 'Bowlby One', cursive;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    color: rgb(183, 115, 60);
+}
+
+.footer-section p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a, .footer-section a {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(183, 115, 60);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .footer-section a:hover {
+    color: rgb(221, 155, 101);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    border-top: 1px solid rgba(183, 115, 60, 0.3);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .footer-content {
+        justify-content: flex-start;
+    }
+
+    .footer-section {
+        flex-basis: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-links li {
+        margin: 0 1rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #footer {
+        padding: 2rem 0.5rem 1rem;
+    }
+
+    .footer-title {
+        font-size: 1.3rem;
+    }
+
+    .footer-section p, .footer-links a {
+        font-size: 0.9rem;
+    }
+
+    .footer-links li {
+        margin: 0 0.5rem 0.5rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}

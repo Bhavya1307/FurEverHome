@@ -1,0 +1,42 @@
+extends layout
+
+block pageStyles
+  link(rel="stylesheet", type="text/css", href="search.css")
+  link(rel="stylesheet", type="text/css", href="common.css")
+
+block main-content
+  h1 Ready to Adopt?
+  h1 Search and bring your new friend home!
+  form(action="/search" method="GET" class="search-form")
+    input(type="text" name="location" placeholder="Lexington Park, North Olmsted, Rootstown, etc...")
+    button(type="submit") Search
+
+  if pets && pets.data && pets.data.length > 0
+    h2 Search Results
+    ul.pet-list
+      each pet in pets.data
+        li.pet-card
+          h3= pet.attributes.name
+          .pet-info
+            if pet.attributes.pictureThumbnailUrl
+              img.pet-image(src=pet.attributes.pictureThumbnailUrl, alt=`Picture of ${pet.attributes.name}`)
+            .pet-details
+              p Breed: #{pet.attributes.breedPrimary || 'Not specified'}
+              p Age: #{pet.attributes.ageGroup || 'Not specified'}
+              p Sex: #{pet.attributes.sex || 'Not specified'}
+              p Size: #{pet.attributes.sizeGroup || 'Not specified'}
+              if pet.relationships && pet.relationships.locations && pet.relationships.locations.data.length > 0
+                - var locationId = pet.relationships.locations.data[0].id
+                - var locationData = pets.included.find(item => item.type === 'locations' && item.id === locationId)
+                if locationData && locationData.attributes
+                  p City: #{locationData.attributes.city || 'Not specified'}
+                  p State: #{locationData.attributes.state || 'Not specified'}
+                  p Postal Code: #{locationData.attributes.postalcode || 'Not specified'}
+                  p Country: #{locationData.attributes.country || 'Not specified'}
+              else
+                p Location: Not specified
+          if pet.attributes.descriptionText
+            .pet-description
+              p Description: #{pet.attributes.descriptionText}
+  else if searchPerformed
+    p No pets found matching your search criteria.

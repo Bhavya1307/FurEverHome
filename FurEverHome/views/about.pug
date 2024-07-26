@@ -1,0 +1,66 @@
+extends layout
+
+block pageStyles
+  link(rel="stylesheet", type="text/css", href="about.css")
+  link(rel="stylesheet", type="text/css", href="common.css")
+
+block main-content
+  .about-container
+    section.hero
+      h1 About FurEverHome
+      p We are dedicated to helping pets find their forever homes and supporting pet owners in their journey.
+
+    section.our-mission
+      .content
+        h2 Our Mission
+        p At FurEverHome, we believe every pet deserves a loving home. Our mission is to connect wonderful animals with caring families, promote responsible pet ownership, and support animal welfare initiatives in our community.
+        p We strive to:
+        ul
+          li Create a world where no pet is left without a loving family
+          li Educate the public about the joys and responsibilities of pet ownership
+          li Provide support and resources to pet owners throughout their journey
+          li Collaborate with shelters and rescues to increase adoption rates
+          li Advocate for animal welfare and rights at local and national levels
+      .image
+        img(src="https://images.unsplash.com/photo-1581888475780-27b6b0bc3690?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGV0JTIwY2FyZXxlbnwwfHwwfHx8MA%3D%3D" alt="Happy adopted pet")
+
+    section.what-we-do
+      h2 What We Do
+      .services
+        .service-card
+          img(src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGV0JTIwYWRvcHRpb258ZW58MHx8MHx8fDA%3D" alt="Pet adoption")
+          h3 Pet Adoption
+          p We facilitate adoptions, matching pets with loving families.
+
+        .service-card
+          img(src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGV0JTIwZWR1Y2F0aW9ufGVufDB8fDB8fHww" alt="Pet education")
+          h3 Education
+          p We provide resources on pet care, health, and behavior.
+
+        .service-card
+          img(src="https://images.unsplash.com/photo-1527526029430-319f10814151?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsJTIwc2hlbHRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Community outreach")
+          h3 Community Outreach
+          p We work with local shelters and organize adoption events.
+
+    section.our-story
+      h2 Our Story
+      p FurEverHome started as a small, local initiative in 2010. Founded by a group of passionate animal lovers, we've grown into a nationwide network of shelters, rescues, and pet care professionals. Our journey has been filled with wagging tails, purring companions, and countless heartwarming adoption stories.
+      p Over the years, we've:
+      ul
+        li Facilitated over 100,000 pet adoptions across the country
+        li Partnered with 500+ animal shelters and rescue organizations
+        li Launched educational programs reaching millions of pet owners
+        li Developed a comprehensive online platform for pet adoption and care resources
+        li Initiated community outreach programs to assist low-income pet owners
+      p Today, FurEverHome continues to grow and evolve, always keeping our core mission at heart: to create happy endings for pets and their human companions.
+
+    section.get-involved
+      h2 Get Involved
+      .get-involved-content
+        p There are many ways you can support our mission:
+        ul
+          li Adopt a pet
+          li Volunteer at our shelters
+          li Foster animals in need
+          li Donate to support our work
+        a.cta-button(href="/contact") Contact Us to Learn More

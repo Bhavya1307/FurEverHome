@@ -1,0 +1,33 @@
+extends layout
+
+block pageStyles
+  link(rel="stylesheet", type="text/css", href="contact.css")
+  link(rel="stylesheet", type="text/css", href="common.css")
+
+block main-content
+  .contact-container
+    h1 Contact Us
+    p You can reach us at: contact@fureverhome.com
+    
+    .tagline
+      p We would love to hear from you! Please fill out the form below and we will get in touch with you shortly.
+
+    .contact-form
+      form
+        .form-group
+          label(for="name") Name
+          input(type="text" id="name" name="name" required)
+        
+        .form-group
+          label(for="email") Email
+          input(type="email" id="email" name="email" required)
+        
+        .form-group
+          label(for="subject") Subject
+          input(type="text" id="subject" name="subject" required)
+        
+        .form-group
+          label(for="message") Message
+          textarea(id="message" name="message" rows="5" required)
+        
+        button(type="submit") Send Message

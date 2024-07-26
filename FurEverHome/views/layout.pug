@@ -1,0 +1,12 @@
+block variables 
+doctype html 
+html 
+  head
+    meta(charset="utf-8")
+    title #{title} | Pet Adoption Guide
+    block pageStyles
+  body
+    include header
+    main#main 
+      block main-content
+    include footer

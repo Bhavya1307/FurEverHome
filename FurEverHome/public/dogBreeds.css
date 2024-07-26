@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+body {
+    font-family: 'Abel', sans-serif;
+    line-height: 1.6;
+    color: rgb(183, 115, 60);
+    background-color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Bowlby One', cursive;
+    color: rgb(183, 115, 60);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #ff0000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.breed-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
+    padding: 20px;
+}
+
+.breed-card {
+    background-color: #fff;
+    border: 3px solid rgb(221, 155, 101);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.breed-card:hover {
+    transform: translateY(-5px);
+    background-color: rgb(255, 245, 238);
+    transition: background-color 0.3s ease;
+}
+
+.breed-card h3 {
+    font-family: 'Bowlby One', cursive;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(183, 115, 60);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.breed-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.breed-card p {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.breed-card strong {
+    font-weight: bold;
+    color: rgb(221, 155, 101);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .breed-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .breed-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .breed-card h3 {
+        font-size: 20px;
+    }
+
+    .breed-card img {
+        height: 150px;
+    }
+
+    .breed-card p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .breed-list {
+        grid-template-columns: 1fr;
+    }
+
+    .breed-card {
+        padding: 15px;
+    }
+
+    .breed-card h3 {
+        font-size: 18px;
+    }
+
+    .breed-card img {
+        height: 120px;
+    }
+
+    .breed-card p {
+        font-size: 12px;
+    }
+}
