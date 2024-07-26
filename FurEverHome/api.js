@@ -1,7 +1,10 @@
+// API endpoints for different services
+
 const rescueGroups = "https://api.rescuegroups.org/v5/public";
 const dogApi = "https://api.thedogapi.com/v1";
 const catApi = "https://api.thecatapi.com/v1";
 
+// Function to fetch dog breeds details from "The Dog Api"
 async function getDogBreeds() {
     let reqUrl = `${dogApi}/breeds`;
     try {
@@ -23,6 +26,7 @@ async function getDogBreeds() {
     }
 }
 
+// Function to fetch cat breeds details from "The Cat Api"
 async function getCatBreeds() {
     let reqUrl = `${catApi}/breeds`;
     try {
@@ -44,6 +48,7 @@ async function getCatBreeds() {
     }
 }
 
+// Function to fetch cat breeds imgaes from "The Cat Api"
 async function getCatImages(breedId, limit = 10) {
     let reqUrl = `${catApi}/images/search?limit=${limit}&breed_ids=${breedId}`;
     try {
@@ -65,6 +70,7 @@ async function getCatImages(breedId, limit = 10) {
     }
 }
 
+// Function to fetch dog breeds imgaes from "The Dog Api"
 async function getDogImages(breedId, limit = 10) {
     let reqUrl = `${dogApi}/images/search?limit=${limit}&breed_id=${breedId}`;
     try {
@@ -86,7 +92,9 @@ async function getDogImages(breedId, limit = 10) {
     }
 }
 
-async function searchPets(location) {
+
+// Function to search a pet from "RescueGroup Api"
+async function searchPets() {
     let filters = [];
     
     let reqUrl = `${rescueGroups}/animals/search`;
@@ -121,7 +129,7 @@ async function searchPets(location) {
     return data;
   }
 
-// Don't forget to export the new function
+// Exporting the functions
 module.exports = {
     getDogBreeds,
     getCatBreeds,

@@ -10,7 +10,6 @@ const app = express();
 const port = process.env.PORT || 8888;
 
 // Define important folders
-app.use(express.static(path.join(__dirname, 'vi')));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -18,11 +17,14 @@ app.set('view engine', 'pug');
 // Setup public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// PAGE ROUTES
+// Page Routes
+
+// Home route
 app.get('/', async (req, res) => {
   res.render('index', { title: 'Home' });
 });
 
+// Search page route
 app.get('/search', async (req, res) => {
   const location = req.query.location;
   try {
@@ -59,6 +61,7 @@ app.get('/search', async (req, res) => {
   }
 });
 
+// dogBreed page route
 app.get('/dogBreeds', async (req, res) => {
   try {
     const dogBreeds = await api.getDogBreeds();
@@ -77,6 +80,7 @@ app.get('/dogBreeds', async (req, res) => {
   }
 });
 
+// catBreed page route
 app.get('/catBreeds', async (req, res) => {
   try {
     const catBreeds = await api.getCatBreeds();
@@ -95,6 +99,7 @@ app.get('/catBreeds', async (req, res) => {
   }
 });
 
+// To displat cat images
 app.get('/catImages/:breedId', async (req, res) => {
   try {
       const breedId = req.params.breedId;
@@ -114,6 +119,8 @@ app.get('/catImages/:breedId', async (req, res) => {
   }
 });
 
+
+// To display dog images
 app.get('/dogImages/:breedId', async (req, res) => {
   try {
       const breedId = req.params.breedId;
@@ -133,14 +140,17 @@ app.get('/dogImages/:breedId', async (req, res) => {
   }
 });
 
+// Care page route
 app.get('/care', (req, res) => {
   res.render('care', { title: 'Pet Care Information' });
 });
 
+// About page route
 app.get('/about', (req, res) => {
   res.render('about', { title: 'About Us' });
 });
 
+// Contact page route
 app.get('/contact', (req, res) => {
   res.render('contact', { title: 'Contact Us' });
 });
