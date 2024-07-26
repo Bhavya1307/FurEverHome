@@ -1,5 +1,9 @@
 # FurEverHome - Pet Adoption Guide
 
+## Preview
+
+You can check out this web application at `https://fur-ever-home-azure.vercel.app/`
+
 ## Description
 
 FurEverHome is a comprehensive pet adoption platform designed to connect potential pet owners with animals in need of loving homes. This web application provides information about various dog and cat breeds, allows users to search for adoptable pets, and offers resources on pet care and adoption processes.
@@ -55,7 +59,7 @@ RESCUEGROUPS_API_KEY=your_rescuegroups_api_key
 1. Start the server:
 
 ```bash
-npm run dev
+npm start
 ```
 
 2. Open a web browser and go to `http://localhost:8888`
