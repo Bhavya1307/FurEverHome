@@ -55,7 +55,7 @@ RESCUEGROUPS_API_KEY=your_rescuegroups_api_key
 1. Start the server:
 
 ```bash
-npm start
+npm run dev
 ```
 
 2. Open a web browser and go to `http://localhost:8888`
