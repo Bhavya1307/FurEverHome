@@ -58,7 +58,7 @@ RESCUEGROUPS_API_KEY=your_rescuegroups_api_key
 npm start
 ```
 
-2. Open a web browser and go to `http://localhost:3000`
+2. Open a web browser and go to `http://localhost:8888`
 
 ## API Integration
 
@@ -74,16 +74,11 @@ This project integrates with three external APIs:
 - `routes/`: Contains route handlers
 - `views/`: Pug templates for rendering pages
 - `public/`: Static assets (CSS, images)
-- `api/`: API integration functions
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-This project is licensed under the MIT License.
-
 ## Contact
 
-For any queries or support, please contact us at: contact@petadoptionguide.com
+For any queries or support, please contact at: bdp9834@gmail.com
