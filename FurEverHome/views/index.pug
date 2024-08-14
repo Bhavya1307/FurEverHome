@@ -7,7 +7,8 @@ block pageStyles
 
 block main-content
   div.main
-    img.mainImg(src="./Images/main.jpg")
+    // https://fur-ever-home-azure.vercel.app/Images/main.jpg
+    img.mainImg(src="./Images/main.jpg") 
     div.title
       h1.page-title Welcome to FurEverHome!
       p.tag-line Where Love Finds a Home.
@@ -31,10 +32,12 @@ block main-content
 
   div.breed-links
     a.breed-link(href="/dogBreeds")
-      img.breed-img(src="https://cdn.openart.ai/uploads/image_DpkuhTLL_1721873035821_512.webp", alt="A Cute brown and white puppy looking at you")
+      // https://cdn.openart.ai/uploads/image_DpkuhTLL_1721873035821_512.webp
+      img.breed-img(src="./Images/dogbreed.webp", alt="A Cute brown and white puppy looking at you")
       p.breed-text Explore Dog Breeds
     a.breed-link(href="/catBreeds")
-      img.breed-img(src="https://cdn.openart.ai/uploads/image_hKYP9_ej_1721872867470_raw.jpg", alt="A cute black and white cat looking at you")
+      // https://cdn.openart.ai/uploads/image_hKYP9_ej_1721872867470_raw.jpg
+      img.breed-img(src="./Images/catbreed.jpg", alt="A cute black and white cat looking at you")
       p.breed-text Explore Cat Breeds
 
   div.adoption-process
