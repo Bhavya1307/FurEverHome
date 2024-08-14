@@ -31,7 +31,7 @@ FurEverHome is a comprehensive pet adoption platform designed to connect potenti
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/fureverhome.git
+git clone https://github.com/bhavya1307/fureverhome.git
 ```
 
 2. Navigate to the project directory:
